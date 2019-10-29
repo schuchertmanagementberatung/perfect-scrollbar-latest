@@ -1,7 +1,13 @@
 /*!
+<<<<<<< HEAD
  * perfect-scrollbar v1.5.0
  * Copyright 2020 Hyunje Jun, MDBootstrap and Contributors
  * Licensed under MIT
+=======
+ * perfect-scrollbar v1.4.0
+ * (c) 2019 Hyunje Jun
+ * @license MIT
+>>>>>>> Build: build newest version
  */
 
 function get(element) {
