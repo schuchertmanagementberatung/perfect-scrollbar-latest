@@ -1,3 +1,7 @@
+## WHAT'S THIS REPO FOR
+original repo has been updated with multiple bugfixes, while no one released the latest version and published to npm.
+________
+
 <p align="center">
   <a href="https://mdbootstrap.com/docs/jquery/getting-started/download/?utm_source=GitHub&utm_medium=PerfectScrollbar">
     <img src="https://mdbootstrap.com/img/Marketing/general/logo/medium/mdb-r.png">
