@@ -1,5 +1,8 @@
 ## WHAT'S THIS REPO FOR
-original repo has been updated with multiple bugfixes, while no one released the latest version and published to npm.
+Original repo has been updated with multiple bugfixes, while no one released the latest version and published to npm.
+
+I personally have no copyright of this repo, which still belong to mdbootstrap and other contributors. If I broke any rule of MIT license, please let me know!
+
 ________
 
 <p align="center">
