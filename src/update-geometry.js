@@ -34,7 +34,7 @@ export default function(i) {
     i.containerWidth + i.settings.scrollXMarginOffset < i.contentWidth
   ) {
     i.scrollbarXActive = true;
-    i.railXWidth = i.containerWidth - i.railXMarginWidth;
+    i.railXWidth = i.containerWidth - i.railXMarginWidth - 1;
     i.railXRatio = i.containerWidth / i.railXWidth;
     i.scrollbarXWidth = getThumbSize(
       i,
@@ -54,7 +54,7 @@ export default function(i) {
     i.containerHeight + i.settings.scrollYMarginOffset < i.contentHeight
   ) {
     i.scrollbarYActive = true;
-    i.railYHeight = i.containerHeight - i.railYMarginHeight;
+    i.railYHeight = i.containerHeight - i.railYMarginHeight - 1;
     i.railYRatio = i.containerHeight / i.railYHeight;
     i.scrollbarYHeight = getThumbSize(
       i,

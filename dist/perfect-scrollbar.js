@@ -1,10 +1,14 @@
 /*!
 <<<<<<< HEAD
+<<<<<<< HEAD
  * perfect-scrollbar v1.5.0
  * Copyright 2020 Hyunje Jun, MDBootstrap and Contributors
  * Licensed under MIT
 =======
  * perfect-scrollbar v1.4.0
+=======
+ * perfect-scrollbar v1.0.0
+>>>>>>> FIX(exceed): make sure railXWidth and railYHeight less than container
  * (c) 2019 Hyunje Jun
  * @license MIT
 >>>>>>> Build: build newest version
@@ -381,6 +385,7 @@ var updateGeometry = function(i) {
 >>>>>>> Build: build newest version
   }
 
+<<<<<<< HEAD
   function toInt(x) {
     return parseInt(x, 10) || 0;
   }
@@ -391,6 +396,43 @@ var updateGeometry = function(i) {
       matches(el, 'select,[contenteditable]') ||
       matches(el, 'textarea,[contenteditable]') ||
       matches(el, 'button,[contenteditable]')
+=======
+  if (
+    !i.settings.suppressScrollX &&
+    i.containerWidth + i.settings.scrollXMarginOffset < i.contentWidth
+  ) {
+    i.scrollbarXActive = true;
+    i.railXWidth = i.containerWidth - i.railXMarginWidth - 1;
+    i.railXRatio = i.containerWidth / i.railXWidth;
+    i.scrollbarXWidth = getThumbSize(
+      i,
+      toInt(i.railXWidth * i.containerWidth / i.contentWidth)
+    );
+    i.scrollbarXLeft = toInt(
+      (i.negativeScrollAdjustment + element.scrollLeft) *
+        (i.railXWidth - i.scrollbarXWidth) /
+        (i.contentWidth - i.containerWidth)
+    );
+  } else {
+    i.scrollbarXActive = false;
+  }
+
+  if (
+    !i.settings.suppressScrollY &&
+    i.containerHeight + i.settings.scrollYMarginOffset < i.contentHeight
+  ) {
+    i.scrollbarYActive = true;
+    i.railYHeight = i.containerHeight - i.railYMarginHeight - 1;
+    i.railYRatio = i.containerHeight / i.railYHeight;
+    i.scrollbarYHeight = getThumbSize(
+      i,
+      toInt(i.railYHeight * i.containerHeight / i.contentHeight)
+    );
+    i.scrollbarYTop = toInt(
+      roundedScrollTop *
+        (i.railYHeight - i.scrollbarYHeight) /
+        (i.contentHeight - i.containerHeight)
+>>>>>>> FIX(exceed): make sure railXWidth and railYHeight less than container
     );
   }
 
