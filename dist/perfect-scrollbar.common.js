@@ -1,17 +1,7 @@
 /*!
-<<<<<<< HEAD
-<<<<<<< HEAD
- * perfect-scrollbar v1.5.0
+ * perfect-scrollbar v1.5.1
  * Copyright 2020 Hyunje Jun, MDBootstrap and Contributors
  * Licensed under MIT
-=======
- * perfect-scrollbar v1.4.0
-=======
- * perfect-scrollbar v1.0.0
->>>>>>> FIX(exceed): make sure railXWidth and railYHeight less than container
- * (c) 2019 Hyunje Jun
- * @license MIT
->>>>>>> Build: build newest version
  */
 
 'use strict';
@@ -335,8 +325,9 @@ function updateGeometry(i) {
   var roundedScrollTop = Math.floor(element.scrollTop);
   var rect = element.getBoundingClientRect();
 
-  i.containerWidth = Math.ceil(rect.width);
-  i.containerHeight = Math.ceil(rect.height);
+  i.containerWidth = Math.round(rect.width);
+  i.containerHeight = Math.round(rect.height);
+
   i.contentWidth = element.scrollWidth;
   i.contentHeight = element.scrollHeight;
 
