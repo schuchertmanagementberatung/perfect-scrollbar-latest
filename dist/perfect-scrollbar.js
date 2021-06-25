@@ -1,6 +1,6 @@
 /*!
  * perfect-scrollbar v1.5.1
- * Copyright 2020 Hyunje Jun, MDBootstrap and Contributors
+ * Copyright 2021 Hyunje Jun, MDBootstrap and Contributors
  * Licensed under MIT
  */
 
@@ -1127,6 +1127,7 @@
     useBothWheelAxes: false,
     wheelPropagation: true,
     wheelSpeed: 1,
+    useScrollingClass: true,
   }); };
 
   var handlers = {
@@ -1304,11 +1305,12 @@
     }
 
     updateGeometry(this);
-    processScrollDiff(this, 'top', this.element.scrollTop - this.lastScrollTop);
+    processScrollDiff(this, 'top', this.element.scrollTop - this.lastScrollTop, this.settings.useScrollingClass);
     processScrollDiff(
       this,
       'left',
-      this.element.scrollLeft - this.lastScrollLeft
+      this.element.scrollLeft - this.lastScrollLeft,
+      this.settings.useScrollingClass
     );
 
     this.lastScrollTop = Math.floor(this.element.scrollTop);

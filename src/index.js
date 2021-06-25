@@ -25,6 +25,7 @@ const defaultSettings = () => ({
   useBothWheelAxes: false,
   wheelPropagation: true,
   wheelSpeed: 1,
+  useScrollingClass: true,
 });
 
 const handlers = {
@@ -200,11 +201,12 @@ export default class PerfectScrollbar {
     }
 
     updateGeometry(this);
-    processScrollDiff(this, 'top', this.element.scrollTop - this.lastScrollTop);
+    processScrollDiff(this, 'top', this.element.scrollTop - this.lastScrollTop, this.settings.useScrollingClass);
     processScrollDiff(
       this,
       'left',
-      this.element.scrollLeft - this.lastScrollLeft
+      this.element.scrollLeft - this.lastScrollLeft,
+      this.settings.useScrollingClass
     );
 
     this.lastScrollTop = Math.floor(this.element.scrollTop);
